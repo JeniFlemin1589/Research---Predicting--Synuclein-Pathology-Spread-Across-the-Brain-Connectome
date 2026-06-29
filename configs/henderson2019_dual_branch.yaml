@@ -1,0 +1,34 @@
+project:
+  name: henderson2019_dual_branch
+  output_dir: outputs/henderson2019_dual_branch
+  seed: 42
+  device: cpu
+
+data:
+  artifact_dir: data/henderson2019
+  history_len: 1
+  dynamic_features:
+    - burden_norm
+    - delta_burden
+    - pathology_z
+  static_features:
+    - snca_prior
+    - hemisphere
+    - vulnerability
+  split:
+    train_fraction: 0.6
+    val_fraction: 0.2
+
+model:
+  name: dual_branch
+  hidden_dim: 64
+  heads: 2
+  dropout: 0.15
+  regression_head: false
+
+training:
+  epochs: 50
+  batch_size: 4
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  regression_weight: 0.0

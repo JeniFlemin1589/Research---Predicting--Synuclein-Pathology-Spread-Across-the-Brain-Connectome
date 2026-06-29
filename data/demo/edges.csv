@@ -1,0 +1,15 @@
+src_region,dst_region,edge_weight,edge_type
+midbrain,striatum,0.92,anatomical
+striatum,cortex,0.84,anatomical
+midbrain,hindbrain,0.74,anatomical
+hindbrain,thalamus,0.56,anatomical
+thalamus,cortex,0.64,anatomical
+glia_niche,midbrain,0.62,glial
+glia_niche,striatum,0.58,glial
+striatum,midbrain,0.92,anatomical
+cortex,striatum,0.84,anatomical
+hindbrain,midbrain,0.74,anatomical
+thalamus,hindbrain,0.56,anatomical
+cortex,thalamus,0.64,anatomical
+midbrain,glia_niche,0.62,glial
+striatum,glia_niche,0.58,glial

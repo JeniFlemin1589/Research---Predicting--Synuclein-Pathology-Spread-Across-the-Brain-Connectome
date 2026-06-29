@@ -1,0 +1,32 @@
+project:
+  seed: 42
+  device: null
+  output_dir: outputs/demo_gru_only
+
+data:
+  artifact_dir: data/demo
+  history_len: 3
+  dynamic_features:
+    - burden_norm
+    - delta_burden
+    - pathology_z
+  static_features:
+    - hnoca_cortex_prior
+    - hnoca_striatum_prior
+    - hnoca_midbrain_prior
+    - hnoca_hindbrain_prior
+  split:
+    train_fraction: 0.7
+    val_fraction: 0.15
+
+model:
+  name: gru_only
+  hidden_dim: 48
+
+training:
+  batch_size: 4
+  epochs: 15
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  regression_weight: 0.0
+

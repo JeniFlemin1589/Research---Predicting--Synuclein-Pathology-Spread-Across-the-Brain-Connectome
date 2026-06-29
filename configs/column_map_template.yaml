@@ -1,0 +1,6 @@
+organoid: organoid_id
+region: region_id
+time: time_idx
+condition_label: condition
+signal: burden
+

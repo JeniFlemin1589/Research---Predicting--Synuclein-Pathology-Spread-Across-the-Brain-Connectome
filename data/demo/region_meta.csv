@@ -1,0 +1,7 @@
+region_id,hnoca_cortex_prior,hnoca_striatum_prior,hnoca_midbrain_prior,hnoca_hindbrain_prior
+cortex,0.95,0.15,0.25,0.1
+striatum,0.25,0.95,0.45,0.25
+midbrain,0.15,0.5,0.95,0.75
+hindbrain,0.1,0.25,0.8,0.95
+thalamus,0.7,0.65,0.4,0.2
+glia_niche,0.3,0.3,0.5,0.55

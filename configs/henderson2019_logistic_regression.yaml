@@ -1,0 +1,31 @@
+data:
+  artifact_dir: data/henderson2019
+  dynamic_features:
+  - burden_norm
+  - delta_burden
+  - pathology_z
+  history_len: 1
+  split:
+    train_fraction: 0.6
+    val_fraction: 0.2
+  static_features:
+  - snca_prior
+  - hemisphere
+  - vulnerability
+model:
+  dropout: 0.0
+  heads: 1
+  hidden_dim: 64
+  name: logistic_regression
+  regression_head: false
+project:
+  device: cpu
+  name: henderson2019_logistic_regression
+  output_dir: outputs/henderson2019_logistic_regression
+  seed: 42
+training:
+  batch_size: 4
+  epochs: 50
+  learning_rate: 0.0003
+  regression_weight: 0.0
+  weight_decay: 0.0001

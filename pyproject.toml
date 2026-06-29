@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ripgnn"
+version = "0.1.0"
+description = "Public-data GNN-kinetic framework for regional infiltration probability prediction in brain organoids."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "MIT" }
+authors = [
+  { name = "OpenAI Codex" }
+]
+dependencies = [
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<3",
+  "pyyaml>=6.0,<7",
+  "scikit-learn>=1.5,<2",
+  "matplotlib>=3.9,<4",
+  "seaborn>=0.13,<0.14",
+  "requests>=2.32,<3",
+  "tqdm>=4.66,<5",
+  "torch>=2.6,<2.8",
+  "torch_geometric>=2.7,<3"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3,<9",
+  "jupyterlab>=4.2,<5"
+]
+atlas = [
+  "anndata>=0.11,<0.12",
+  "scanpy>=1.10,<2"
+]
+
+[project.scripts]
+ripgnn = "ripgnn.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
